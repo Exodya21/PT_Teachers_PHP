@@ -12,5 +12,5 @@
         />
         <title>PT Teachers PHP</title>
     </head>
-    <body>
+    <body class="m-2 vh-100">
         
