@@ -11,6 +11,8 @@
             crossorigin="anonymous" 
         />
         <title>PT Teachers PHP</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    	<!-- <script src="/jquery-3.4.1.min.js"></script> -->
     </head>
     <body class="m-2 vh-100">
         

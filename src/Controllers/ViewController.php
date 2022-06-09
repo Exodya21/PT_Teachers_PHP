@@ -7,7 +7,7 @@ class ViewController
 {
     public function index() 
     {
-        // $teachers = (new Teacher())->all();
+        $teachers = (new Teacher())->all();
         require_once __DIR__ . "/../Views/landing.php";
     }
 }

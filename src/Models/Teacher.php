@@ -1,6 +1,8 @@
 <?php
 namespace App\Models;   
 
+use App\Core\SQLQueryRepository;
+
 class Teacher
 {
     public int $id;
@@ -17,12 +19,21 @@ class Teacher
 
             $this->name = $data['nombre'];
             $this->email = $data['email'];
-            $this->nameCentro = $data['nombreCentro'];
+            $this->nameCentro = $data['centro_id'];
             $this->numberPhone = $data['telefono'];
         }
 
-        // $this->db = new SQLQueryRepository();
+        $this->db = new SQLQueryRepository();
+    }
+
+    public function all()
+    {
+        $teachersList = [];
+
+        foreach($this->db->getAll() as $teacher) 
+        {
+            array_push($teachersList, new self ($teacher));
+        } return $teachersList;
     }
 }
-
 ?>
